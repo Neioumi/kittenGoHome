@@ -1,12 +1,15 @@
-var s_HelloWorld = "res/HelloWorld.png";
-var s_CloseNormal = "res/CloseNormal.png";
-var s_CloseSelected = "res/CloseSelected.png";
+var res = {
+    s_HelloWorld : "res/HelloWorld.png",
+    s_CloseNormal : "res/CloseNormal.png",
+    s_CloseSelected : "res/CloseSelected.png"
+};
 
-var g_resources = [
+
+var g_mainmenu = [
     //image
-    s_HelloWorld,
-    s_CloseNormal,
-    s_CloseSelected
+    {src:res.s_HelloWorld},
+    {src:res.s_CloseNormal},
+    {src:res.s_CloseSelected},
 
     //plist
 
@@ -18,3 +21,18 @@ var g_resources = [
 
     //effect
 ];
+
+// var g_maingame = [
+    //image
+
+    //plist
+
+    //fnt
+
+    //tmx
+
+    //bgm
+
+    //effect
+// ];
+
