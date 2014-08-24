@@ -1,15 +1,19 @@
 var res = {
-    s_HelloWorld : "res/HelloWorld.png",
-    s_CloseNormal : "res/CloseNormal.png",
-    s_CloseSelected : "res/CloseSelected.png"
+    s_HelloWorld : "res/HelloWorld.png", // dummy
+    s_Title : "res/title.png",
+    s_SpriteBtn : "res/spriteBtn.png",
+    s_SpriteIcon : "res/spriteIcon.png",
+
 };
 
 
 var g_mainmenu = [
     //image
-    {src:res.s_HelloWorld},
-    {src:res.s_CloseNormal},
-    {src:res.s_CloseSelected},
+    {src:res.s_HelloWorld}, // dummy
+    {src:res.s_Title},
+    {src:res.s_SpriteBtn},
+    {src:res.s_SpriteIcon},
+
 
     //plist
 
@@ -22,7 +26,7 @@ var g_mainmenu = [
     //effect
 ];
 
-// var g_maingame = [
+var g_maingame = [
     //image
 
     //plist
@@ -34,5 +38,5 @@ var g_mainmenu = [
     //bgm
 
     //effect
-// ];
+];
 

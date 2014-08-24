@@ -40,7 +40,12 @@
         //SingleEngineFile:'',
         appFiles:[
             'src/resource.js',
-            'src/Menu.js'
+            'src/About.js',
+            'src/Collection.js',
+            'src/GameLayer.js',
+            'src/GameOver.js',
+            'src/Menu.js',
+            'src/SettingsLayer.js',
         ]
     };
 
