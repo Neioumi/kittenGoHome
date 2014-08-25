@@ -21,12 +21,17 @@ var GameOver = cc.Layer.extend({
     }
 });
 
-var GameOverScene = cc.Scene.extend({
-    onEnter:function () {
-        this._super();
-        var layer = new GameOver();
-        layer.init();
-        this.addChild(layer);
+GameOver.create = function () {
+    var sg = new GameOver();
+    if (sg && sg.init()) {
+        return sg;
     }
-});
+    return null;
+};
 
+GameOver.scene = function () {
+    var scene = cc.Scene.create();
+    var layer = GameOver.create();
+    scene.addChild(layer, 1);
+    return scene;
+};

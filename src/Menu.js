@@ -29,8 +29,7 @@ var Menu = cc.Layer.extend({
         // CCMenuItemSpriteはCCNodeオブジェクトをアイテムとして受け付ける
         // 非選択時、選択時、不活性時の3つのステータスを持つ。
         var newGame = cc.MenuItemSprite.create(newGameNormal, newGameSelected, newGameDisabled,
-            this.onNewGame, this
-        );
+            this.onNewGame, this);
         var collection = cc.MenuItemSprite.create(collectionNormal, collectionSelected, collectionDisabled, this.onCollection, this);
         var settings = cc.MenuItemSprite.create(settingsNormal, settingsSelected, settingsDisabled, this.onSettings, this);
         var about = cc.MenuItemSprite.create(aboutNormal, aboutSelected, aboutDisabled, this.onAbout, this);
@@ -73,22 +72,27 @@ var Menu = cc.Layer.extend({
         scene.addChild(About.create());
         cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1.2, scene));
     },
-    onTouchesBegan:function (touches, event) {
-    },
-    onTouchesMoved:function (touches, event) {
-    },
-    onTouchesEnded:function (touches, event) {
-    },
-    onTouchesCancelled:function (touches, event) {
-    }
+    // onTouchesBegan:function (touches, event) {
+    // },
+    // onTouchesMoved:function (touches, event) {
+    // },
+    // onTouchesEnded:function (touches, event) {
+    // },
+    // onTouchesCancelled:function (touches, event) {
+    // }
 });
 
-var MenuScene = cc.Scene.extend({
-    onEnter:function () {
-        this._super();
-        var layer = new Menu();
-        layer.init();
-        this.addChild(layer);
+Menu.create = function () {
+    var sg = new Menu();
+    if (sg && sg.init()) {
+        return sg;
     }
-});
+    return null;
+};
 
+Menu.scene = function () {
+    var scene = cc.Scene.create();
+    var layer = Menu.create();
+    scene.addChild(layer);
+    return scene;
+};

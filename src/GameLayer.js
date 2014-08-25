@@ -11,22 +11,36 @@ var GameLayer = cc.Layer.extend({
         return true;
     },
 
-    onTouchesBegan:function (touches, event) {
-    },
-    onTouchesMoved:function (touches, event) {
-    },
-    onTouchesEnded:function (touches, event) {
-    },
-    onTouchesCancelled:function (touches, event) {
-    }
+    // onTouchesBegan:function (touches, event) {
+    // },
+    // onTouchesMoved:function (touches, event) {
+    // },
+    // onTouchesEnded:function (touches, event) {
+    // },
+    // onTouchesCancelled:function (touches, event) {
+    // }
 });
 
-var GameLayerScene = cc.Scene.extend({
-    onEnter:function () {
-        this._super();
-        var layer = new GameLayer();
-        layer.init();
-        this.addChild(layer);
-    }
-});
+// GameLayer.scene = cc.Scene.extend({
+//     onEnter:function () {
+//         this._super();
+//         var layer = new GameLayer();
+//         layer.init();
+//         this.addChild(layer);
+//     }
+// });
 
+GameLayer.create = function () {
+    var sg = new GameLayer();
+    if (sg && sg.init()) {
+        return sg;
+    }
+    return null;
+};
+
+GameLayer.scene = function () {
+    var scene = cc.Scene.create();
+    var layer = GameLayer.create();
+    scene.addChild(layer, 1);
+    return scene;
+};
