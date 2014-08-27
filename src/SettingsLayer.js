@@ -34,16 +34,14 @@ var SettingsLayer = cc.Layer.extend({
         //     cc.MenuItemFont.create("Hard"));
         // item2.setCallback( this.onModeControl );
 
-        var backBtn = cc.Sprite.create(res.s_SpriteBtn, cc.rect(0, 60, 222, 60));
-        backBtn.setAnchorPoint(0, 0);
-        backBtn.setPosition(0, 0);
-        var back = cc.MenuItemLabel.create(backBtn, this.onBackCallback);
-        // this.addChild(backBtn);
-
-        var menu = cc.Menu.create(back);
-        menu.alignItemsVerticallyWithPadding(20);
-        // menu.alignItemsInColumns(2, 2, 1);
-        this.addChild(menu);
+        var backBtnNormal = cc.Sprite.create(res.s_SpriteBtn, cc.rect(0, 60, 222, 60));
+        var backBtnSelected = cc.Sprite.create(res.s_SpriteBtn, cc.rect(0, 0, 222, 60));
+        var backBtnDisabled = cc.Sprite.create(res.s_SpriteBtn, cc.rect(0, 60, 222, 60));
+        var backBtn = cc.MenuItemSprite.create(backBtnNormal, backBtnSelected, backBtnDisabled, this.onBackCallback, this);
+        var backMenu = cc.Menu.create(backBtn);
+        backMenu.alignItemsVerticallyWithPadding(20);
+        this.addChild(backMenu, 1, 2);
+        backMenu.setPosition(winSize.width / 2, winSize.height / 6);
 
         this.setTouchEnabled(true);
         return true;
