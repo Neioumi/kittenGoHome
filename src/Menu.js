@@ -1,4 +1,9 @@
 var Menu = cc.Layer.extend({
+    // for sprite
+    // sprite:null,
+    // spriteFrameNamePrefix: "cat_front",
+    // spriteFrameIndex: 0,
+
     init:function () {
         this._super();
         var winSize = cc.Director.getInstance().getWinSize();
@@ -7,6 +12,15 @@ var Menu = cc.Layer.extend({
         logo.setAnchorPoint(0, 0);
         logo.setPosition(80, 760);
         this.addChild(logo, 1);
+
+        // ぬこスプライト
+        // var cache = cc.SpriteFrameCache.getInstance();
+        // cache.addSpriteFrames("spritesheet.plist", "res.s_Sprite");
+
+        // this.sprite = cc.Sprite.createWithSpriteFrameName(this.spriteFrameNamePrefix + "00.png");
+        // this.sprite.setPosition(new cc.Point(300,300));
+        // this.sprite.setScale(3);
+        // this.addChild(this.sprite);
 
         // メニューのスプライト画像
         var newGameNormal = cc.Sprite.create(res.s_SpriteBtn, cc.rect(0, 240, 222, 60));

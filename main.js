@@ -33,6 +33,10 @@ var cocos2dApp = cc.Application.extend({
         cc.initDebugSetting();
         cc.setup(this.config['tag']);
         cc.AppController.shareAppController().didFinishLaunchingWithOptions();
+        // preload plist for spritesheet
+        // cc.Loader.shareLoader().preload([
+        //     {type:"plist",src:"spritesheet.plist"}
+        // ]);
     },
     applicationDidFinishLaunching:function () {
         if(cc.RenderDoesnotSupport()){
@@ -44,8 +48,8 @@ var cocos2dApp = cc.Application.extend({
         cc.EGLView.getInstance().resizeWithBrowserSize(true);
         cc.EGLView.getInstance().setDesignResolutionSize(640, 960, cc.RESOLUTION_POLICY.SHOW_ALL);
 
-	    // initialize director
-	    var director = cc.Director.getInstance();
+        // initialize director
+        var director = cc.Director.getInstance();
 
         // turn on display FPS
         director.setDisplayStats(this.config['showFPS']);
