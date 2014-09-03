@@ -2,6 +2,7 @@ var res = {
     s_HelloWorld : "res/HelloWorld.png", // dummy
     s_Title : "res/title.png",
     s_Sprite : "res/spritesheet.png",
+    s_SpritePlist : "res/spritesheet.plist",
     s_SpriteBtn : "res/spriteBtn.png",
     s_SpriteIcon : "res/spriteIcon.png",
 };
@@ -17,6 +18,7 @@ var g_mainmenu = [
 
 
     //plist
+    {src:res.s_SpritePlist},
 
     //fnt
 

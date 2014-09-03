@@ -1,8 +1,8 @@
 var Menu = cc.Layer.extend({
     // for sprite
-    // sprite:null,
-    // spriteFrameNamePrefix: "cat_front",
-    // spriteFrameIndex: 0,
+    spriteSheet: null,
+    catAnime: null,
+    sprite: null,
 
     init:function () {
         this._super();
@@ -10,17 +10,31 @@ var Menu = cc.Layer.extend({
 
         var logo = cc.Sprite.create(res.s_Title);
         logo.setAnchorPoint(0, 0);
-        logo.setPosition(80, 760);
+        logo.setPosition(80, 820);
         this.addChild(logo, 1);
 
         // ぬこスプライト
-        // var cache = cc.SpriteFrameCache.getInstance();
-        // cache.addSpriteFrames("spritesheet.plist", "res.s_Sprite");
+        // スプライトシートの作成
+        cc.SpriteFrameCache.getInstance().addSpriteFrames(res.s_SpritePlist);
+        this.spriteSheet = cc.SpriteBatchNode.create(res.s_Sprite);
+        this.addChild(this.spriteSheet);
+        // アニメーションを配列に入れる
+        var animFrames = [];
+        for (var i = 1; i <= 5; i++ ) {
+            var str = "cat_front" + i + ".png";
+            var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+            animFrames.push(frame);
+        }
+        // アニメーション作成
+        var animation = cc.Animation.create(animFrames, 0.1);
+        // ぬこアニメ
+        this.catAnime = cc.RepeatForever.create(cc.Animate.create(animation));
+        // アニメーションを表示するSprite作成、そのspriteでぬこアニメをrun
+        this.sprite = cc.Sprite.createWithSpriteFrameName("cat_front01.png");
+        this.sprite.setPosition(winSize.width / 2, winSize.height / 2 + 130);
+        this.sprite.runAction(this.catAnime);
+        this.spriteSheet.addChild(this.sprite);
 
-        // this.sprite = cc.Sprite.createWithSpriteFrameName(this.spriteFrameNamePrefix + "00.png");
-        // this.sprite.setPosition(new cc.Point(300,300));
-        // this.sprite.setScale(3);
-        // this.addChild(this.sprite);
 
         // メニューのスプライト画像
         var newGameNormal = cc.Sprite.create(res.s_SpriteBtn, cc.rect(0, 240, 222, 60));
@@ -53,7 +67,7 @@ var Menu = cc.Layer.extend({
         var menu = cc.Menu.create(newGame, collection, settings, about);
         menu.alignItemsVerticallyWithPadding(20);
         this.addChild(menu, 1, 2); // addChild(child, zOrder, tag)
-        menu.setPosition(winSize.width / 2, winSize.height / 2 - 80);
+        menu.setPosition(winSize.width / 2, winSize.height / 2 - 250);
 
 
         this.setTouchEnabled(true);
