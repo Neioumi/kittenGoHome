@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>cat_front01.png</key>
+            <key>cat_front1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{240,345}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{240,345}</string>
             </dict>
-            <key>cat_front02.png</key>
+            <key>cat_front2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,349},{240,345}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{240,345}</string>
             </dict>
-            <key>cat_front03.png</key>
+            <key>cat_front3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,1043},{240,331}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{240,345}</string>
             </dict>
-            <key>cat_front04.png</key>
+            <key>cat_front4.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,2},{240,345}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{240,345}</string>
             </dict>
-            <key>cat_front05.png</key>
+            <key>cat_front5.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,696},{240,345}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{240,345}</string>
             </dict>
-            <key>cat_front06.png</key>
+            <key>cat_front6.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,349},{240,345}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{240,345}</string>
             </dict>
-            <key>cat_walk01.png</key>
+            <key>cat_walk1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,696},{126,114}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk02.png</key>
+            <key>cat_walk10.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{372,696},{126,114}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk03.png</key>
+            <key>cat_walk2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,812},{126,114}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk04.png</key>
+            <key>cat_walk3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{372,824},{126,114}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk05.png</key>
+            <key>cat_walk4.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,928},{126,114}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk06.png</key>
+            <key>cat_walk5.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{372,952},{126,114}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk07.png</key>
+            <key>cat_walk6.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,1044},{126,114}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk08.png</key>
+            <key>cat_walk7.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{372,1080},{126,114}}</string>
@@ -186,7 +186,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk09.png</key>
+            <key>cat_walk8.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{244,1160},{126,114}}</string>
@@ -199,7 +199,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk10.png</key>
+            <key>cat_walk9.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{372,1208},{126,114}}</string>
@@ -222,7 +222,7 @@
             <key>size</key>
             <string>{488,1376}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b203ff2c58f8a97b73b1d07b184d31f9:b3ec6850b4ee6f2629bf80d4dfbcd0d8:1de88c2a7237d4cdf78de8d8ad4f4c7e$</string>
+            <string>$TexturePacker:SmartUpdate:9ead784183cb4aaae758184d8f7b5693:ba105e6d2d1f16ea91fa30957fd71edc:1de88c2a7237d4cdf78de8d8ad4f4c7e$</string>
             <key>textureFileName</key>
             <string>spritesheet.png</string>
         </dict>
