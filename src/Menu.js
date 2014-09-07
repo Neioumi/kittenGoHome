@@ -1,4 +1,9 @@
 var Menu = cc.Layer.extend({
+    // for sprite
+    spriteSheet: null,
+    catAnime: null,
+    sprite: null,
+
     init:function () {
         this._super();
         var winSize = cc.Director.getInstance().getWinSize();
@@ -7,6 +12,29 @@ var Menu = cc.Layer.extend({
         logo.setAnchorPoint(0, 0);
         logo.setPosition(80, 820);
         this.addChild(logo, 1);
+
+
+        // ぬこスプライト
+        // スプライトシートの作成
+        cc.SpriteFrameCache.getInstance().addSpriteFrames(res.s_SpriteMenuPlist);
+        this.spriteSheet = cc.SpriteBatchNode.create(res.s_SpriteMenu);
+        this.addChild(this.spriteSheet);
+        // アニメーションを配列に入れる
+        var animFrames = [];
+        for (var i = 1; i <= 3; i++ ) {
+            var str = "cat_front" + i + ".png";
+            var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+            animFrames.push(frame);
+        }
+        // アニメーション作成
+        var animation = cc.Animation.create(animFrames, 0.2);
+        // ぬこアニメ
+        this.catAnime = cc.RepeatForever.create(cc.Animate.create(animation));
+        // アニメーションを表示するSprite作成、そのspriteでぬこアニメをrun
+        this.sprite = cc.Sprite.createWithSpriteFrameName("cat_front1.png");
+        this.sprite.setPosition(winSize.width / 2, winSize.height / 2 + 130);
+        this.sprite.runAction(this.catAnime);
+        this.spriteSheet.addChild(this.sprite);
 
 
         // メニューのスプライト画像

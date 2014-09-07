@@ -1,8 +1,8 @@
 var GameLayer = cc.Layer.extend({
     // for sprite
-    // spriteSheet: null,
-    // catAnime: null,
-    // sprite: null,
+    spriteSheet: null,
+    catAnime: null,
+    sprite: null,
 
     init:function () {
         this._super();
@@ -13,27 +13,27 @@ var GameLayer = cc.Layer.extend({
         this.addChild(menuLabel, 5);
 
 
-        // // ぬこスプライト
-        // // スプライトシートの作成
-        // cc.SpriteFrameCache.getInstance().addSpriteFrames(res.s_SpritePlist);
-        // this.spriteSheet = cc.SpriteBatchNode.create(res.s_Sprite);
-        // this.addChild(this.spriteSheet);
-        // // アニメーションを配列に入れる
-        // var animFrames = [];
-        // for (var i = 1; i <= 5; i++ ) {
-        //     var str = "cat_front" + i + ".png";
-        //     var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
-        //     animFrames.push(frame);
-        // }
-        // // アニメーション作成
-        // var animation = cc.Animation.create(animFrames, 0.1);
-        // // ぬこアニメ
-        // this.catAnime = cc.RepeatForever.create(cc.Animate.create(animation));
-        // // アニメーションを表示するSprite作成、そのspriteでぬこアニメをrun
-        // this.sprite = cc.Sprite.createWithSpriteFrameName("cat_front01.png");
-        // this.sprite.setPosition(winSize.width / 2, winSize.height / 2 + 130);
-        // this.sprite.runAction(this.catAnime);
-        // this.spriteSheet.addChild(this.sprite);
+        // ぬこスプライト
+        // スプライトシートの作成
+        cc.SpriteFrameCache.getInstance().addSpriteFrames(res.s_SpriteCatPlist);
+        this.spriteSheet = cc.SpriteBatchNode.create(res.s_SpriteCat);
+        this.addChild(this.spriteSheet);
+        // アニメーションを配列に入れる
+        var animFrames = [];
+        for (var i = 1; i <= 5; i++ ) {
+            var str = "cat_walk" + i + ".png";
+            var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
+            animFrames.push(frame);
+        }
+        // アニメーション作成
+        var animation = cc.Animation.create(animFrames, 0.2);
+        // ぬこアニメ
+        this.catAnime = cc.RepeatForever.create(cc.Animate.create(animation));
+        // アニメーションを表示するSprite作成、そのspriteでぬこアニメをrun
+        this.sprite = cc.Sprite.createWithSpriteFrameName("cat_walk1.png");
+        this.sprite.setPosition(90, winSize.height / 2);
+        this.sprite.runAction(this.catAnime);
+        this.spriteSheet.addChild(this.sprite);
 
 
         this.setTouchEnabled(true);
