@@ -20,13 +20,13 @@ var GameLayer = cc.Layer.extend({
         this.addChild(this.spriteSheet);
         // アニメーションを配列に入れる
         var animFrames = [];
-        for (var i = 1; i <= 5; i++ ) {
+        for (var i = 1; i <= 10; i++ ) {
             var str = "cat_walk" + i + ".png";
             var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
             animFrames.push(frame);
         }
         // アニメーション作成
-        var animation = cc.Animation.create(animFrames, 0.2);
+        var animation = cc.Animation.create(animFrames, 0.1);
         // ぬこアニメ
         this.catAnime = cc.RepeatForever.create(cc.Animate.create(animation));
         // アニメーションを表示するSprite作成、そのspriteでぬこアニメをrun
