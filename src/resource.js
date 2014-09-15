@@ -5,6 +5,8 @@ var res = {
     s_SpriteMenuPlist : "res/sprite_menu.plist",
     s_SpriteCat : "res/sprite_cat.png",
     s_SpriteCatPlist : "res/sprite_cat.plist",
+    s_SpriteEnemy : "res/sprite_enemy.png",
+    s_SpriteEnemyPlist : "res/sprite_enemy.plist",
     s_SpriteBtn : "res/spriteBtn.png",
     s_SpriteIcon : "res/spriteIcon.png",
 };
@@ -34,9 +36,11 @@ var g_mainmenu = [
 var g_maingame = [
     //image
     {src:res.s_SpriteCat},
+    {src:res.s_SpriteEnemy},
 
     //plist
     {src:res.s_SpriteCatPlist},
+    {src:res.s_SpriteEnemyPlist},
 
     //fnt
 

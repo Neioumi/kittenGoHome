@@ -1,39 +1,66 @@
 var GameLayer = cc.Layer.extend({
-    // for sprite
-    spriteSheet: null,
+    // for cat sprite
+    catSpriteSheet: null,
     catAnime: null,
-    sprite: null,
-
+    catSprite: null,
+    // for enemy sprite
+    enemySpriteSheet: null,
+    enemyAnime: null,
+    enemySprite: null,
     init:function () {
         this._super();
         var winSize = cc.Director.getInstance().getWinSize();
 
         var menuLabel = cc.LabelTTF.create("Game Scene", "Arial", 38);
-        menuLabel.setPosition(cc.p(winSize.width / 2, winSize.height / 2));
+        menuLabel.setPosition(cc.p(winSize.width / 2, 800));
         this.addChild(menuLabel, 5);
 
 
         // ぬこスプライト
         // スプライトシートの作成
         cc.SpriteFrameCache.getInstance().addSpriteFrames(res.s_SpriteCatPlist);
-        this.spriteSheet = cc.SpriteBatchNode.create(res.s_SpriteCat);
-        this.addChild(this.spriteSheet);
+        this.catSpriteSheet = cc.SpriteBatchNode.create(res.s_SpriteCat);
+        this.addChild(this.catSpriteSheet);
         // アニメーションを配列に入れる
-        var animFrames = [];
+        var catAnimFrames = [];
         for (var i = 1; i <= 12; i++ ) {
             var str = "cat_walk" + i + ".png";
             var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
-            animFrames.push(frame);
+            catAnimFrames.push(frame);
         }
         // アニメーション作成
-        var animation = cc.Animation.create(animFrames, 0.1);
+        var catAnimation = cc.Animation.create(catAnimFrames, 0.1);
         // ぬこアニメ
-        this.catAnime = cc.RepeatForever.create(cc.Animate.create(animation));
+        this.catAnime = cc.RepeatForever.create(cc.Animate.create(catAnimation));
         // アニメーションを表示するSprite作成、そのspriteでぬこアニメをrun
-        this.sprite = cc.Sprite.createWithSpriteFrameName("cat_walk1.png");
-        this.sprite.setPosition(90, winSize.height / 2);
-        this.sprite.runAction(this.catAnime);
-        this.spriteSheet.addChild(this.sprite);
+        this.catSprite = cc.Sprite.createWithSpriteFrameName("cat_walk1.png");
+        this.catSprite.setPosition(90, winSize.height / 2);
+        this.catSprite.runAction(this.catAnime);
+        this.catSpriteSheet.addChild(this.catSprite);
+
+
+        // 敵スプライト
+        // スプライトシートの作成
+        cc.SpriteFrameCache.getInstance().addSpriteFrames(res.s_SpriteEnemyPlist);
+        this.enemySpriteSheet = cc.SpriteBatchNode.create(res.s_SpriteEnemy);
+        this.addChild(this.enemySpriteSheet);
+        // アニメーションを配列に入れる
+        var enemyAnimFrames = [];
+        for (var j = 1; j <= 2; j++ ) {
+            var enemyStr = "ghost1_" + j + ".png";
+            var enemyFrame = cc.SpriteFrameCache.getInstance().getSpriteFrame(enemyStr);
+            enemyAnimFrames.push(enemyFrame);
+        }
+        // アニメーション作成
+        var enemyAnimation = cc.Animation.create(enemyAnimFrames, 0.3);
+        // 敵アニメ
+        this.enemyAnime = cc.RepeatForever.create(cc.Animate.create(enemyAnimation));
+        // アニメーションを表示するSprite作成、そのspriteで敵アニメをrun
+        this.enemySprite = cc.Sprite.createWithSpriteFrameName("ghost1_1.png");
+        this.enemySprite.setPosition(400, winSize.height / 2 + 100);
+        this.enemySprite.runAction(this.enemyAnime);
+        this.enemySpriteSheet.addChild(this.enemySprite);
+
 
 
         this.setTouchEnabled(true);
