@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk2.png</key>
+            <key>cat_walk11.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{258,2},{126,114}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk3.png</key>
+            <key>cat_walk12.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{386,2},{126,114}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk4.png</key>
+            <key>cat_walk2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{514,2},{126,114}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk5.png</key>
+            <key>cat_walk3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{642,2},{126,114}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk6.png</key>
+            <key>cat_walk4.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{770,2},{126,114}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk7.png</key>
+            <key>cat_walk5.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{898,2},{126,114}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk8.png</key>
+            <key>cat_walk6.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1026,2},{126,114}}</string>
@@ -121,10 +121,36 @@
                 <key>sourceSize</key>
                 <string>{126,114}</string>
             </dict>
-            <key>cat_walk9.png</key>
+            <key>cat_walk7.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1154,2},{126,114}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{126,114}}</string>
+                <key>sourceSize</key>
+                <string>{126,114}</string>
+            </dict>
+            <key>cat_walk8.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1282,2},{126,114}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{126,114}}</string>
+                <key>sourceSize</key>
+                <string>{126,114}</string>
+            </dict>
+            <key>cat_walk9.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1410,2},{126,114}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -142,9 +168,9 @@
             <key>realTextureFileName</key>
             <string>sprite_cat.png</string>
             <key>size</key>
-            <string>{1282,118}</string>
+            <string>{1538,118}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:211960e92bf555be4c6ecef86a12e35d:43a31c64d951f2db68b64d6c7a24bf89:4b5f136000eb99273a65c0c166ce87be$</string>
+            <string>$TexturePacker:SmartUpdate:b1fcd375a4fe64a4b1302acba1668262:e3dff03c7b7652c47b1af5a390251843:4b5f136000eb99273a65c0c166ce87be$</string>
             <key>textureFileName</key>
             <string>sprite_cat.png</string>
         </dict>

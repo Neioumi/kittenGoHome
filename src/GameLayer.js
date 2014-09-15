@@ -20,7 +20,7 @@ var GameLayer = cc.Layer.extend({
         this.addChild(this.spriteSheet);
         // アニメーションを配列に入れる
         var animFrames = [];
-        for (var i = 1; i <= 10; i++ ) {
+        for (var i = 1; i <= 12; i++ ) {
             var str = "cat_walk" + i + ".png";
             var frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(str);
             animFrames.push(frame);
